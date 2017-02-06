@@ -6,7 +6,7 @@
 //
 
 #import "RNSegmentIOAnalytics.h"
-#import <React/RCTConvert.h>
+#import "RCTConvert.h"
 #import "SEGAnalytics.h"
 #import <Foundation/Foundation.h>
 
@@ -89,7 +89,7 @@ RCT_EXPORT_METHOD(enable) {
 -(NSMutableDictionary*) convertToStringDictionary: (NSDictionary *)properties {
     /*
      According to React Native's documentation:
-     
+
      For maps, it is the developer's responsibility to check the value types individually by manually calling RCTConvert helper methods.
      */
     NSMutableDictionary *stringDictionary = [[NSMutableDictionary alloc] init];
