@@ -59,11 +59,22 @@ public class RNSegmentIOAnalyticsModule extends ReactContextBaseJavaModule {
    https://segment.com/docs/libraries/android/#identify
    */
   @ReactMethod
-  public void identifyUser(String userId, ReadableMap traits) {
+  public void identify(String userId, ReadableMap traits) {
     if (!mEnabled) {
       return;
     }
     Analytics.with(null).identify(userId, toTraits(traits), toOptions(null));
+  }
+
+  /*
+   https://segment.com/docs/libraries/android/#group
+   */
+  @ReactMethod
+  public void group(String groupId, ReadableMap traits) {
+    if (!mEnabled) {
+      return;
+    }
+    Analytics.with(null).group(groupId, toTraits(traits), toOptions(null));
   }
 
   /*
