@@ -31,8 +31,16 @@ var RNSegmentIOAnalytics = {
      * https://segment.com/docs/libraries/ios/#identify
      * https://segment.com/docs/libraries/android/#identify
      */
-    identifyUser: function (userId, traits) {
-        NativeRNSegmentIOAnalytics.identifyUser(userId, traits);
+    identify: function (userId, traits) {
+        NativeRNSegmentIOAnalytics.identify(userId, traits);
+    },
+
+    /*
+     * https://segment.com/docs/libraries/ios/#group
+     * https://segment.com/docs/libraries/android/#group
+     */
+    group: function (groupId, traits) {
+        NativeRNSegmentIOAnalytics.group(groupId, traits);
     },
 
     /*
